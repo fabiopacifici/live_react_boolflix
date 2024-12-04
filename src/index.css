@@ -4,3 +4,71 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body
+{
+  background-color: black;
+  color: #ededed;
+}
+
+header
+{
+  background-color: #33333391;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+}
+
+
+.media_card
+{
+  position: relative;
+
+  .media_card_details
+  {
+    display: none;
+    padding: 1rem;
+    position: absolute;
+    top: 10px;
+    left: 10px
+  }
+
+  &:hover .media_card_details
+  {
+    display: block;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  /* Style the scrollbar inside this element */
+  ::-webkit-scrollbar
+  {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track
+  {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb
+  {
+    background: #888;
+    border-radius: 20px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover
+  {
+    background: #555;
+  }
+
+
+  &:hover>img
+  {
+    filter: brightness(0.2);
+  }
+}
